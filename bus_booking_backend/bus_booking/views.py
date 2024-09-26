@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Bus, Booking  
-from .serializers import BusSerializer, BookingSerializer  
+from bus_booking.models import Bus, Booking  # Change this line
+from bus_booking.serializers import BusSerializer, BookingSerializer  
 
 class BusList(APIView):
     def get(self, request):

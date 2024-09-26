@@ -1,7 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from .views import BusList, BookingList  
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('bookings.urls')),  
+    path('', BusList.as_view(), name='bus-list'),  
+    path('bookings/', BookingList.as_view(), name='booking-list'), 
 ]
